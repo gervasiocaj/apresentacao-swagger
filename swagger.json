@@ -1,0 +1,33 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "alfa",
+    "title": "Hello world",
+    "description": "Exemplo de uso do Swagger."
+  },
+  "host": "localhost",
+  "basePath": "/alfa",
+  "consumes": ["application/json"],
+  "produces": ["application/text"],
+  "paths": {
+    "/hello/{subject}": {
+      "get": {
+        "description": "Mostra uma mensagem de \"hello world\" para um determinado sujeito.",
+        "responses": {
+          "200": {
+            "description": "A mensagem de hello para um sujeito.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Erro ao construir a mensagem.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
