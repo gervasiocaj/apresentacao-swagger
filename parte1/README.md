@@ -9,6 +9,8 @@ sudo apt-get install -y ruby-full ruby-bundler
 
 bundle install
 
+ln swagger.json public/swagger.json
+
 ruby server.rb
 ```
 
